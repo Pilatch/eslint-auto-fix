@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 let argv = require('yargs')
-  .usage('$0 <globs-to-watch> [options]')
+  .usage('$0 [globs-to-watch] [options]')
   // TODO put in positional arg
   // with a reminder to quote the globs unless you want the shell to expand them!
   .option('verbose', {
@@ -14,6 +14,7 @@ let argv = require('yargs')
     describe: 'Whether to fix all the matching files immediately',
     type: 'boolean',
   })
+  .epilogue('[globs-to-watch] are file globs you want to watch for changes.\nDefaults to "./**/*.js".\n(You probably want to enclose these in quotes unless you want the shell to expand them before watching.)')
   .help()
   .argv
 
