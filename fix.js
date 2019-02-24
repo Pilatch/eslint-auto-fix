@@ -3,7 +3,11 @@ let chokidar = require('chokidar')
 let fs = require('fs')
 let writingTo = {} // Paths we're currently writing fixed codez to
 
-module.exports = (globsToWatch, verbose = false) => {
+module.exports = (globsToWatch, options) => {
+  let startupTime = new Date().getTime()
+  let verbose = options.verbose
+  let fixOnStartup = options['fix-on-startup']
+
   if (!globsToWatch || !globsToWatch.length) {
     globsToWatch = ['./**/*.js']
   }
@@ -18,6 +22,19 @@ module.exports = (globsToWatch, verbose = false) => {
 
   chokidar.watch(globsToWatch)
     .on('change', fix(verbose))
+    .on('add', path => {
+      if (fixOnStartup) {
+        fix(verbose)(path)
+      } else {
+        // When chokidar first starts watching, it emits an "add" event for each file
+        // it finds matching the glob. Fixing them all at that point might be undesirable.
+        fs.stat(path, (error, stats) => {
+          if (stats && startupTime < stats.birthtimeMs) {
+            fix(verbose)(path)
+          }
+        })
+      }
+    })
 }
 
 let errorMessages = (fatalErrorResults, path) => {

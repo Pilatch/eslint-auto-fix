@@ -9,7 +9,12 @@ let argv = require('yargs')
     describe: 'Whether to say when a file is being fixed',
     type: 'boolean',
   })
+  .option('fix-on-startup', {
+    default: false,
+    describe: 'Whether to fix all the matching files immediately',
+    type: 'boolean',
+  })
   .help()
   .argv
 
-require('./fix')(argv._, argv.verbose)
+require('./fix')(argv._, argv)
