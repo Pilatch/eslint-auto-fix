@@ -1,0 +1,36 @@
+{
+  "name": "eslint-auto-fix",
+  "version": "1.0.0",
+  "repository": "https://github.com/Pilatch/eslint-auto-fix",
+  "bin": {
+    "eslint-auto-fix": "cli.js"
+  },
+  "main": "fix.js",
+  "scripts": {},
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "eslint": "^5.14.1",
+    "yargs": "^13.2.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "eslint": ">=2"
+  },
+  "engines": {
+    "node": ">=6 < 14"
+  },
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "keywords": [
+    "auto fix",
+    "auto format",
+    "auto-fix",
+    "auto-format",
+    "eslint auto fix",
+    "eslint auto format",
+    "eslint fix",
+    "eslint format",
+    "eslint",
+    "eslint-fix",
+    "eslint-format"
+  ]
+}
