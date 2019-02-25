@@ -77,7 +77,7 @@ Without the quotes this will only watch the `.js` files that are present in the 
 
 ## Defaults
 
-If you don't provide the file globs to watch, it will watch all files in your project ending in '.js' that are not inside node_modules nor bower_components.
+If you don't provide the file globs to watch, it will watch all files in your project ending in `.js`.
 
 ## Peer Dependency
 
