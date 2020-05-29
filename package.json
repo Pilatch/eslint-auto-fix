@@ -8,7 +8,7 @@
   "main": "fix.js",
   "scripts": {},
   "dependencies": {
-    "chokidar": "^2.0.4",
+    "chokidar": "^3.4.0",
     "eslint": "^5.14.1",
     "yargs": "^13.2.1"
   },
