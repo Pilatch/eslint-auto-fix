@@ -1,6 +1,6 @@
 {
   "name": "eslint-auto-fix",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/Pilatch/eslint-auto-fix",
   "bin": {
     "eslint-auto-fix": "cli.js"
@@ -8,7 +8,7 @@
   "main": "fix.js",
   "scripts": {},
   "dependencies": {
-    "chokidar": "^2.0.4",
+    "chokidar": "^3.4.0",
     "eslint": "^5.14.1",
     "yargs": "^13.2.1"
   },
