@@ -1,6 +1,6 @@
 {
   "name": "eslint-auto-fix",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/Pilatch/eslint-auto-fix",
   "bin": {
     "eslint-auto-fix": "cli.js"
