@@ -1,6 +1,6 @@
 {
   "name": "eslint-auto-fix",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "https://github.com/Pilatch/eslint-auto-fix",
   "bin": {
     "eslint-auto-fix": "cli.js"
@@ -25,7 +25,7 @@
     "set-value": "^2.0.1"
   },
   "engines": {
-    "node": ">=6 < 14"
+    "node": ">=6 < 18"
   },
   "license": "GNU GENERAL PUBLIC LICENSE",
   "keywords": [
